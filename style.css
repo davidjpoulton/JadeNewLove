@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+ }
+
+#navbar {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    background: transparent;
+    color: black;
+    justify-content: space-between;
+    margin: 0 50px;
+}
+
+#services-arrow {
+    width: 30px;
+    height: 19px;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    margin: 0;
+}
