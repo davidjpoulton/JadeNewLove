@@ -3,26 +3,74 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
- }
+}
+
+body {
+    font-family: "Cinzel";
+    background-color: #FCFCFC;
+}
 
 #navbar {
-    display: flex;
-    align-items: center;
+    position: fixed;
     height: 70px;
-    background: transparent;
     color: black;
-    justify-content: space-between;
-    margin: 0 50px;
+    right: 60px;
+    top: 23px;
+}
+
+#nav-bg {
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    background-color: white;
+}
+
+#nav-logo {
+    position: fixed;
+    top: 7px;
+    left: 50px;
+    font-family: "Parisienne";
+    font-size: 40px;
+}
+
+.links a {
+    font-family: "Cinzel Decorative";
+    color: black;
+    font-size: 19px;
+    margin: 0 25px;
 }
 
 #services-arrow {
     width: 30px;
     height: 19px;
+    margin: 7px 0 0 0;
 }
+
 
 .links {
     display: flex;
-    flex-direction: row;
     color: black;
     margin: 0;
+}
+
+#main-image {
+    height: 100%;
+    width: 100%;
+    margin-top: 70px;
+}
+
+#home-button {
+    position: absolute;
+    top: 450px;
+    right: 300px;
+}
+
+.button {
+    width: 250px;
+    height: 70px;
+    background-color: #EABDBD;
+    color: black;
+    font-family: "Cinzel";
+    font-weight: bold;
+    font-size: 1em;
 }
