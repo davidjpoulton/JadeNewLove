@@ -68,9 +68,9 @@ a {
     animation: all .3s ease;
 }
 
-.links a:hover {
+.white:hover {
     transition: all .3s ease;
-    
+    color: white;
 }
 
 .links {
@@ -79,9 +79,9 @@ a {
     margin: 0;
 }
 
-
-#services:hover .dropdown {
+#services:hover ~ .dropdown {
     opacity: 1;
+    display: block;
 }
 
 #services {
@@ -91,7 +91,8 @@ a {
 .dropdown {
     position: absolute;
     opacity: 0;
-    margin-top: 32px;
+    display: none;
+    margin-top: 61px;
     width: 440px;
     height: 250px;
     background-color: rgb(255, 229, 227);
@@ -103,6 +104,11 @@ a {
     z-index: 5;
     text-align: center;
     transition: all .2s ease;
+}
+
+.dropdown:hover {
+    display: block;
+    opacity: 1;
 }
 
 .dropdown li {
@@ -117,6 +123,8 @@ a {
 .dropdown li:hover {
     background-color: rgb(255, 244, 244);
 }
+
+
 
 #services:hover #drop-arrow span {
     background-color: rgb(255, 255, 255);
@@ -148,8 +156,6 @@ a {
     transform: rotate(-40deg);
     border-radius: 10px;
 }
-
-
 
 .social-icons-box{
     position: absolute;
@@ -358,7 +364,7 @@ a {
 #instafeed{
     margin: 0 auto;
     width: 80%;
-    height: 300px;
+    max-height: 500px;
     background-color: #fff;
     border: 2px solid #FFBCB8;
 }
@@ -377,4 +383,13 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.photo-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.instagram-media {
+    max-width: 100px;
 }
