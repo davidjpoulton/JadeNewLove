@@ -32,8 +32,10 @@ a {
 .top-nav {
     width: 100%;
     height: 90px;
-    background-color: rgba(255, 188, 184, 0.884);
+    background-color: rgb(255, 188, 184);
     border-bottom: 1px solid black;
+    position: fixed;
+    z-index: 100;
 }
 
 .logo-container {
@@ -94,7 +96,7 @@ a {
     display: none;
     margin-top: 61px;
     width: 440px;
-    height: 250px;
+    height: 188px;
     background-color: rgb(255, 229, 227);
     z-index: 50;
     font-family: "Playfair Display";
@@ -123,8 +125,6 @@ a {
 .dropdown li:hover {
     background-color: rgb(255, 244, 244);
 }
-
-
 
 #services:hover #drop-arrow span {
     background-color: rgb(255, 255, 255);
@@ -180,7 +180,7 @@ a {
 }
 
 .banner {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: auto;
 }
@@ -188,13 +188,15 @@ a {
 .banner img {
     width: 100%;
     height: auto;
+    margin-top: 90px;
+    z-index: -5;
 }
 
 .button {
     position: relative;
     left: 16%;
     top: -220px;
-    background: #D2EAFF;
+    background: #FFBCB8;
     border: 1px solid rgba(0, 0, 0, 0.88);
     box-sizing: border-box;
     height: 68px;
@@ -202,6 +204,12 @@ a {
     font-family: "Playfair Display";
     font-size: 1.5vw;
     cursor: pointer;
+    z-index: 1;
+}
+
+.button:hover {
+    background: #D2EAFF;
+    transition: all .3s ease;
 }
 
 .intro-text {
@@ -210,70 +218,102 @@ a {
     font-family: "Playfair Display";
     text-align: center;
     font-size: 1.5em;
-    margin: 48% auto 0;
+    margin: 50px auto 0;
     line-height: 40px;
 }
 
-
 .footer {
-    height: 180px;
+    height: 250px;
     width: 100%;
     background-color: rgb(255, 188, 184);
-    margin-top: 100px;
 }
 
 #footer-container {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 20px 0;
+    justify-content: space-between;
     align-items: center;
+    margin: 0 30px;
+    position: relative;
 }
 
-.footer-link-box h3 {
-    font-family: "Playfair Display";
+#footer-signiture {
+    font-family: "Parisienne";
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 36px;
     margin-bottom: 15px;
-    margin-top: 20px;
+    position: absolute;
+    top: 10px;
+}
+
+.footer-link-box {
+    position: absolute;
+    top: 75px;
 }
 
 .footer-link-box p {
     font-family: "Playfair Display";
-    font-weight: lighter;
-    font-size: 1em;
-    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 1.1em;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+.footer-link-box p:hover {
+    color: white;
 }
 
-.footer img {
-    width: 260px;
+#logo-pink {
+    width: 360px;
     height: auto;
-}
-
-#footer-bottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 100%;
-    background-color: #FFEBEA;
-    font-weight: bold;
-    font-size: .7em;
-}
-
-#footer-bottom p {
-    margin-right: 20px;
+    position: absolute;
+    right:0;
+    top: 30px;
 }
 
 .social-icons-footer {
     display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 70px;
 }
 
 .social-icons-footer img {
-    height: 60px;
-    width: 60px;
-    margin: 0 10px;
+    height: 45px;
+    width: 45px;
+}
+
+#back-top {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -54px;
+}
+
+#footer-container h2 {
+    font-family: "Parisienne";
+    font-weight: normal;
+    font-size: 36px;
+    position: absolute;
+    left: 50%;
+    margin-left: -241px;
+    top: 130px;
+}
+
+#footer-container h5 {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    margin-left: -190px;
+    top: 195px;
 }
 
 #line {
@@ -361,35 +401,53 @@ a {
     margin: 0 auto;
 }
 
-#instafeed{
-    margin: 0 auto;
-    width: 80%;
-    max-height: 500px;
-    background-color: #fff;
-    border: 2px solid #FFBCB8;
+/* Services Page */
+/* -------------------------------------- */
+.services-banner {
+    width: 100%;
+    height: auto;
 }
 
-#insta-top-box {
-    position: relative;
-    left: 50%;
-    margin-left: -200px;
-    top: -40px;
-    width: 400px;
-    height: 80px;
-    background-color: #D2EAFF;
-    font-family: "Lobster Two";
-    font-size: 26px;
-    letter-spacing: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.services-banner img {
+    width: 100%;
+    height: auto;
 }
 
-.photo-box {
+#hair {
+    width: 100%;
+    height: 600px;
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     flex-direction: row;
+    background-color: #FDFDFD;
+    margin: 50px auto;
 }
 
-.instagram-media {
-    max-width: 100px;
+.services-photo-box {
+    width: 450px;
+    height: 420px;
+    background-color: #FFBCB8;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.services-photo-box img {
+    width: 450px;
+    height: auto;
+}
+
+.services-photo-box h3 {
+    margin-top: 10px;
+    font-family: "Lobster Two";
+    font-size: 2em;
+}
+
+.services-photo-box p {
+    font-size: 1.2em;
+}
+
+.services-photo-box:hover {
+    background-color: #D2EAFF;
 }
