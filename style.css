@@ -33,7 +33,7 @@ a {
     width: 100%;
     height: 90px;
     background-color: #FFCCC9;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid #666666;
     z-index: 100;
 }
 
@@ -57,8 +57,8 @@ a {
 #scissors {
     margin-left: 310px;
     margin-top: 10px;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: auto;
 }
 
 .links a {
@@ -93,7 +93,7 @@ a {
     position: absolute;
     opacity: 0;
     display: none;
-    margin-top: 61px;
+    margin-top: 62px;
     width: 440px;
     height: 188px;
     background-color: rgb(255, 229, 227);
@@ -195,14 +195,35 @@ a {
     left: 16%;
     top: -220px;
     background: #FFBCB8;
-    border: 1px solid rgba(0, 0, 0, 0.88);
+    border: 3px solid #666666;
     box-sizing: border-box;
     height: 68px;
     width: 20%;
-    font-family: "Playfair Display";
+    font-family: "Lobster Two";
     font-size: 1.5vw;
     cursor: pointer;
     z-index: 1;
+}
+
+.button div:nth-child(1) {
+    position: absolute;
+    right: 31px;
+    top: 20px;
+    height: 15px;
+    width: 2px;
+    background-color: black;
+    transform: rotate(-50deg);
+}
+
+.button div:nth-child(2) {
+    position: absolute;
+    right: 31px;
+    top: 22px;
+    height: 15px;
+    width: 2px;
+    background-color: black;
+    transform: rotate(50deg);
+    margin-top: 7px;
 }
 
 .button:hover {
@@ -406,7 +427,7 @@ a {
     justify-content: center; 
     top: 65px;
     font-family: "Lobster Two";
-    font-size: 1.3em;
+    font-size: 1.6em;
     height: 70px;
     width: 300px;
     background-color: #FFBCB8;
@@ -499,7 +520,7 @@ a {
 -------------------------------------------------- */
 
 #hair-banner {
-    margin: 30px 5%;
+    margin: 10px 5% 30px;
     display: flex;
     justify-content: center;
 }
@@ -626,6 +647,16 @@ a {
 
 /* makeup page
 ---------------------------------------------- */
+
+#makeup-banner {
+    margin: 23px 5% 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#makeup-banner img{
+    width: 100%;
+}
 
 .makeup-services {
     display: flex;
