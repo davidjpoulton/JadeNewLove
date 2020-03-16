@@ -18,8 +18,8 @@ p {
 
 a {
     cursor: pointer;
+    color: black;
 }
-
 
 #nav-links {
     position: absolute;
@@ -32,16 +32,15 @@ a {
 .top-nav {
     width: 100%;
     height: 90px;
-    background-color: rgb(255, 188, 184);
+    background-color: #FFCCC9;
     border-bottom: 1px solid black;
-    position: fixed;
     z-index: 100;
 }
 
 .logo-container {
     position: absolute;
     font-weight: lighter;
-    left: 50px;
+    left: 100px;
     top: 5px;
     font-family: "Parisienne";
     font-size: 30px;
@@ -56,7 +55,7 @@ a {
 }
 
 #scissors {
-    margin-left: 260px;
+    margin-left: 310px;
     margin-top: 10px;
     height: 100px;
     width: 100px;
@@ -188,7 +187,6 @@ a {
 .banner img {
     width: 100%;
     height: auto;
-    margin-top: 90px;
     z-index: -5;
 }
 
@@ -218,14 +216,15 @@ a {
     font-family: "Playfair Display";
     text-align: center;
     font-size: 1.5em;
-    margin: 50px auto 0;
+    margin: 0 auto;
     line-height: 40px;
 }
 
 .footer {
-    height: 250px;
+    height: 230px;
     width: 100%;
-    background-color: rgb(255, 188, 184);
+    background: linear-gradient(125.69deg, #FFFFFF -46.05%, rgba(255, 255, 255, 0) 76.89%), #FFBCB8;
+    border-top: 2px solid rgb(95, 95, 95);
 }
 
 #footer-container {
@@ -265,7 +264,7 @@ a {
     height: auto;
     position: absolute;
     right:0;
-    top: 30px;
+    top: 25px;
 }
 
 .social-icons-footer {
@@ -308,11 +307,11 @@ a {
 #footer-container h5 {
     font-family: "Playfair Display";
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 16px;
     position: absolute;
     left: 50%;
-    margin-left: -190px;
+    margin-left: -212px;
     top: 195px;
 }
 
@@ -326,7 +325,7 @@ a {
     flex-direction: row;
     justify-content: space-around;
     margin: 0 10%;
-}
+} 
 
 #section-1 img {
     width: 40%;
@@ -381,7 +380,7 @@ a {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 
 #section-3 h1 {
@@ -401,6 +400,48 @@ a {
     margin: 0 auto;
 }
 
+#home-page-btn-bottom {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    top: 65px;
+    font-family: "Lobster Two";
+    font-size: 1.3em;
+    height: 70px;
+    width: 300px;
+    background-color: #FFBCB8;
+    border: 3px solid #666666;
+    margin: 0 auto 150px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#home-page-btn-bottom:hover {
+    background-color: #D2EAFF;
+}
+
+#home-page-btn-bottom div:nth-child(1) {
+    position: absolute;
+    right: 10%;
+    top: 20px;
+    height: 15px;
+    width: 2px;
+    background-color: black;
+    transform: rotate(-50deg);
+}
+
+#home-page-btn-bottom div:nth-child(2) {
+    position: absolute;
+    right: 10%;
+    top: 22px;
+    height: 15px;
+    width: 2px;
+    background-color: black;
+    transform: rotate(50deg);
+    margin-top: 7px;
+}
+
+
 /* Services Page */
 /* -------------------------------------- */
 .services-banner {
@@ -413,15 +454,15 @@ a {
     height: auto;
 }
 
-#hair {
+#services-box {
     width: 100%;
-    height: 600px;
+    height: 550px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     flex-direction: row;
+    align-items: center;
     background-color: #FDFDFD;
-    margin: 50px auto;
 }
 
 .services-photo-box {
@@ -431,6 +472,8 @@ a {
     text-align: center;
     cursor: pointer;
     transition: all .3s ease;
+    margin: 50px auto;
+
 }
 
 .services-photo-box img {
@@ -450,4 +493,206 @@ a {
 
 .services-photo-box:hover {
     background-color: #D2EAFF;
+}
+
+/* Hair page
+-------------------------------------------------- */
+
+#hair-banner {
+    margin: 30px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+#hair-banner img{
+    width: 100%;
+}
+
+.hair-content {
+    margin: 0 5%;
+    margin-bottom: 50px;
+}
+
+.line-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.line-box p {
+    font-size: 1vw;
+    line-height: 0px;
+}
+
+.line {
+    height: 1px;
+    background-color: black;
+    width:40%;
+}
+
+#hair-intro {
+    font-family: "Playfair Display";
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+.hair-services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.hair-services-box {
+    position: relative;
+    width: 650px;
+    height: 250px;
+    background-color: #FFDDDB;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    transition: all .3s ease;
+    border-bottom: 2px solid rgb(95, 95, 95);
+    border-top: 2px solid rgb(95, 95, 95);
+}
+
+.hair-services-box:hover {
+    background-color: #D2EAFF;
+}
+
+.hair-services-box:hover .hair-services-btn-left {
+    background-color: #FFBCB8;
+}
+
+.hair-services-box:hover .hair-services-btn-right {
+    background-color: #FFBCB8;
+}
+
+.hair-services-box img {
+    height: 250px;
+    width: auto;
+}
+
+.hair-services-box-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.hair-services-box-content h2 {
+    font-family: "Abril Fatface";
+    font-size: 2.5em;
+    letter-spacing: -0.5px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hair-services-box-content p {
+    font-size: 1.2em;
+    margin: 10px 30px;
+}
+
+.hair-services-btn-left {
+    position: absolute;
+    bottom: 5px;
+    left: 315px;
+    font-family: "Lobster Two";
+    font-size: 1.3em;
+    height: 50px;
+    width: 200px;
+    background-color: #D2EAFF;
+    border: 3px solid #666666;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.hair-services-btn-right {
+    position: absolute;
+    bottom: 5px;
+    left: 135px;
+    font-family: "Lobster Two";
+    font-size: 1.3em;
+    height: 50px;
+    width: 200px;
+    background-color: #D2EAFF;
+    border: 3px solid #666666;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+/* makeup page
+---------------------------------------------- */
+
+.makeup-services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.makeup-services-box {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: #FFDDDB;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    transition: all .3s ease;
+    border-bottom: 2px solid rgb(95, 95, 95);
+    border-top: 2px solid rgb(95, 95, 95);
+}
+
+.makeup-services-box:hover {
+    background-color: #D2EAFF;
+}
+
+.makeup-services-box:hover .makeup-services-btn {
+    background-color: #FFBCB8;
+}
+
+.makeup-services-box img {
+    height: 250px;
+    width: auto;
+}
+
+.makeup-services-box-content {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    text-align: left;
+    margin: 20px 0 0 60px;
+}
+
+.makeup-services-box-content h2 {
+    font-family: "Abril Fatface";
+    font-size: 2.5em;
+    letter-spacing: -0.5px;
+    font-weight: normal;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.makeup-services-box-content p {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.makeup-services-btn {
+    position: absolute;
+    right:3%;
+    top: 65px;
+    font-family: "Lobster Two";
+    font-size: 1.3em;
+    height: 70px;
+    width: 20%;
+    background-color: #D2EAFF;
+    border: 3px solid #666666;
+    margin: 30px auto 0;
+    cursor: pointer;
+    transition: all .3s ease;
 }
