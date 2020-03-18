@@ -14,12 +14,14 @@ body {
 p {
     font-family: "Playfair Display";
     font-size: 1.3em;
+    color: #4E4E4E;
 }
 
 a {
     cursor: pointer;
     color: black;
 }
+
 
 .top-nav {
     width: 100%;
@@ -119,7 +121,7 @@ a {
 }
 
 #services {
-    padding-bottom: 112px;
+    padding-bottom: 90px;
 }
 
 .dropdown {
@@ -197,7 +199,7 @@ a {
 }
 
 #socials {
-    padding-bottom: 112px;
+    padding-bottom: 90px;
 }
 
 .socials-dropdown {
@@ -242,7 +244,7 @@ a {
 
 #socials-drop-arrow span:nth-child(2) {
     position: absolute;
-    left: 357px;
+    left: 337px;
     top: 11px;
     background-color: rgb(0, 0, 0);
     height: 13px;
@@ -254,7 +256,7 @@ a {
 
 #socials-drop-arrow span:nth-child(1) {
     position: absolute;
-    left:350px;
+    left: 330px;
     top: 11px;
     background-color: rgb(0, 0, 0);
     height: 13px;
@@ -344,9 +346,13 @@ a {
     width: 80%;
     font-family: "Playfair Display";
     text-align: center;
-    font-size: 1.3em;
-    margin: 0 auto;
+    margin: 0 auto 70px;
     line-height: 40px;
+}
+
+.intro-text p {
+    font-size: 1.3em;
+
 }
 
 .footer {
@@ -449,16 +455,12 @@ a {
     top: 195px;
 }
 
-#line {
-    display: flex;
-    margin: 50px auto 70px;
-}
-
 #section-1 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 0 10%;
+    padding: 20px 10%;
+    background-color: rgb(255, 232, 231);
 } 
 
 #section-1 img {
@@ -474,7 +476,7 @@ a {
     font-size: 4.5vw;
     font-family: "Playfair Display";
     line-height: 50px;
-    margin-bottom: 70px;
+    margin-bottom: 35px;
 }
 
 #section-1-text p {
@@ -486,7 +488,8 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 100px 10% 0;
+    padding: 20px 10%;
+    background-color: rgb(234, 245, 255);
 }
 
 #section-2 img {
@@ -503,23 +506,24 @@ a {
     font-size: 4.5vw;
     font-family: "Playfair Display";
     line-height: 50px;
-    margin-bottom: 70px;
+    margin-bottom: 35px;
 }
 
 #section-2-text p {
     text-align: right;
     font-family: "Playfair Display";
+    font-size: 1.4vw;
 }
 
 #section-3 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 30px 2%;
+    padding: 20px 0%;
 }
 
 #section-3 h1 {
-    margin: 50px auto;
+    margin: 20px auto 20px;
     font-family: "Playfair Display";
     font-size: 4.5vw;
 }
@@ -531,9 +535,10 @@ a {
 }
 
 #section-3 p {
-    width: 1093px;
+    width: 75%;
     margin: 0 auto;
     text-align: center;
+    font-size: 1.4vw;
 }
 
 #home-page-btn-bottom {
@@ -590,7 +595,7 @@ a {
     width: 100%;
 }
 
-.hair-content {
+.content {
     margin: 0 5%;
     margin-bottom: 50px;
 }
@@ -613,12 +618,28 @@ a {
 }
 
 #hair-intro {
-    font-family: "Playfair Display";
-    font-size: 1.5vw;
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
+    text-align: center;
+    margin: 70px 0;
+}
+
+#hair-intro h2 {
+    font-family: "Lobster Two";
+    font-size: 3vw;
     margin-bottom: 40px;
+    text-align: center;
+}
+
+#hair-intro h5 {
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 30px;
+}
+
+#hair-intro p {
+    font-size: 1.3vw;
+    margin: 0 auto;
+    width: 80%;
 }
 
 .hair-services {
@@ -632,13 +653,12 @@ a {
     position: relative;
     width: 650px;
     height: 220px;
-    background-color: #FFDDDB;
+    background-color: rgb(255, 232, 231);
     display: flex;
     flex-direction: row;
     margin: 15px 0;
     transition: all .3s ease;
     border-bottom: 1px solid rgb(95, 95, 95);
-    border-top: 1px solid rgb(95, 95, 95);
 }
 
 .hair-services-box:hover {
@@ -688,7 +708,7 @@ a {
     width: 200px;
     background-color: #D2EAFF;
     border: 3px solid #666666;
-    margin: 20px auto;
+    margin: 20px auto 0;
     cursor: pointer;
     transition: all .3s ease;
 }
@@ -717,6 +737,32 @@ a {
     width: 100%;
 }
 
+#makeup-intro {
+    text-align: center;
+    margin: 70px 0;
+}
+
+#makeup-intro h2 {
+    font-family: "Lobster Two";
+    font-size: 3vw;
+    
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#makeup-intro p {
+    font-size: 1.3vw;
+    margin: 0 auto;
+    width: 80%;
+}
+
+#makeup-intro h5 {
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 30px;
+}
+
 .makeup-services {
     display: flex;
     justify-content: space-around;
@@ -728,7 +774,7 @@ a {
     position: relative;
     width: 100%;
     height: 200px;
-    background-color: #FFDDDB;
+    background-color: rgb(255, 232, 231);
     display: flex;
     flex-direction: row;
     margin: 15px 0;
@@ -849,9 +895,97 @@ prices page
 ---------------------------------------- */
 
 #bridal-banner {
+    margin: 22px 5% 30px;
+    display: flex;
+    justify-content: center;
 }
 
-#bridal-banner img {
+#bridal-banner img{
     width: 100%;
-    height: auto;
+}
+
+.bridal-content {
+    text-align: center;
+    margin: 0 5%;
+    margin-bottom: 50px;
+}
+
+.bridal-text {
+    font-size: 1.2vw;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.bridal-content h1 {
+    font-family: "Lobster Two";
+    font-size: 2vw;
+    margin: 80px 0;
+}
+
+#bridal-page-btn-bottom {
+    display: flex;
+    justify-content: center; 
+    font-family: "Lobster Two";
+    font-size: 1.6em;
+    height: 70px;
+    width: 300px;
+    background-color: #FFBCB8;
+    border: 3px solid #666666;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#bridal-page-btn-bottom:hover {
+    background-color: #D2EAFF;
+}
+
+/* about page
+------------------------------------- */
+
+#about-page-content {
+    margin: 0 20%;
+}
+
+#about-banner {
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #FFF1F0;
+    border-bottom: 2px solid #666666;
+}
+
+#about-banner h1 {
+    font-family: "Lobster Two";
+    font-size: 3vw;
+    margin-top: 50px;
+}
+
+#about-banner img{
+    width: 100%;
+}
+
+#about-banner p {
+    margin: 40px auto 0;
+    width: 75%;
+}
+
+#about-page-btn-bottom {
+    display: flex;
+    justify-content: center; 
+    font-family: "Lobster Two";
+    font-size: 1.6em;
+    height: 70px;
+    width: 300px;
+    background-color: #FFBCB8;
+    border: 3px solid #666666;
+    margin: 30px auto;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#about-page-btn-bottom:hover {
+    background-color: #D2EAFF;
 }
