@@ -71,14 +71,6 @@ a {
     line-height: 10px;
 }
 
-#scissors {
-    margin-left: 310px;
-    margin-top: 10px;
-    height: 80px;
-    width: auto;
-}
-
-
 #nav-links a {
     font-family: "playfair Display";
     color: black;
@@ -88,10 +80,10 @@ a {
     font-weight: bold;
 }
 
-.white:hover {
-    transition: all .3s ease;
+#nav-links a:hover {
     color: white;
 }
+
 
 .links {
     display: flex;
@@ -130,7 +122,7 @@ a {
     display: none;
     margin-top: 112px;
     width: 440px;
-    height: 188px;
+    height: 180px;
     background-color: rgb(255, 229, 227);
     z-index: 50;
     font-family: "Playfair Display";
@@ -208,7 +200,7 @@ a {
     display: none;
     margin-top: 112px;
     width: 440px;
-    height: 130px;
+    height: 120px;
     background-color: rgb(255, 229, 227);
     z-index: 50;
     font-family: "Playfair Display";
@@ -265,28 +257,164 @@ a {
     border-radius: 10px;
 }
 
-
-
 .social-icons-box{
     position: absolute;
-    top: 20px;
+    top: 40px;
     right: 40px;
     display: flex;
+    display: none;
 }
 
 .social-icons {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     margin: 0 10px;
 }
 
-.burger-menu span {
-    display: flex;
-    flex-direction: column;
+/* burger menu
+------------------------------------------ */
+.menu-wrap {
+    position: absolute;
+    top: 25px;
+    left: 120px;
+    z-index: 150;
+    display: none;
+}
+
+.menu-wrap .toggler {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 151;
     width: 50px;
-    height: 5px;
-    background-color: #373737;
-    margin: 8px 0;
+    height: 50px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.menu-wrap .hamburger {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    z-index: 150;
+    width: 40px;
+    height: 60px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* hamburger line */
+.menu-wrap .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: #272727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: all .4s ease;
+}
+
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+    content: "";
+    position: absolute;
+    z-index: 150;
+    top: -10px;
+    width: 100%;
+    height: 4px;
+    background: inherit;
+    border-radius: 5px;
+}
+
+.menu-wrap .hamburger > div::after {
+    top: 10px;
+}
+
+/* toggler animate */
+.menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+
+/* turn lines into X */
+.menu-wrap .toggler:checked + .hamburger > div:before, 
+.menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/* rotate on hover when checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div{
+    transform: rotate(225deg);
+}
+
+/* show menu */
+.menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 0.75s;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity .4s ease;
+}
+
+.menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-wrap .menu > div {
+    background-color: #FFBCB8;
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all .4s ease;
+}
+
+.menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+
+
+.menu li {
+    padding: .5rem;
+    font-size: 2em;
+}
+
+.menu a {
+    color: #272727;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: white;
+    transition: color .1s ease-in-out;
+    font-weight: bold;
 }
 
 .banner {
@@ -343,7 +471,7 @@ a {
 }
 
 .intro-text {
-    width: 80%;
+    width: 70%;
     font-family: "Playfair Display";
     text-align: center;
     margin: 0 auto 70px;
@@ -400,14 +528,6 @@ a {
     color: white;
 }
 
-#logo-pink {
-    width: 350px;
-    height: auto;
-    position: absolute;
-    left:0;
-    top: 2px;
-}
-
 .social-icons-footer {
     display: flex;
     flex-direction: row;
@@ -459,7 +579,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 20px 10%;
+    padding: 40px 10%;
     background-color: rgb(255, 232, 231);
 } 
 
@@ -476,7 +596,7 @@ a {
     font-size: 4.5vw;
     font-family: "Playfair Display";
     line-height: 50px;
-    margin-bottom: 35px;
+    margin-bottom: 10%;
 }
 
 #section-1-text p {
@@ -488,7 +608,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 20px 10%;
+    padding: 40px 10%;
     background-color: rgb(234, 245, 255);
 }
 
@@ -535,7 +655,7 @@ a {
 }
 
 #section-3 p {
-    width: 75%;
+    width: 72%;
     margin: 0 auto;
     text-align: center;
     font-size: 1.4vw;
@@ -557,11 +677,54 @@ a {
     transition: all .3s ease;
 }
 
-#home-page-btn-bottom:hover {
+.side-menu{
+    position: absolute;
+    left: 297px;
+    top: -55px;
+    height: 170px;
+    width: 300px;
     background-color: #D2EAFF;
+    align-items: center;
+    opacity: 0;
+    transition: all .3s ease;
+    border-right: 3px solid #666666;
+    border-top: 3px solid #666666;
+    border-bottom: 3px solid #666666;
 }
 
-#home-page-btn-bottom div:nth-child(1) {
+.side-menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.side-menu li {
+    padding: 12px 0;
+}
+
+.side-menu li:hover {
+    background-color: rgb(240, 248, 255);
+}
+
+#home-page-btn-bottom:hover {
+    background-color: #D2EAFF;
+    border-right: 3px solid #D2EAFF;
+}
+
+#home-page-btn-bottom:hover .side-menu {
+    opacity: 1;
+}
+
+#home-page-btn-bottom:hover span:nth-child(1) {
+    transform: translateX(60px) rotate(-50deg);
+    
+}
+#home-page-btn-bottom:hover span:nth-child(2) {
+    transform: translateX(60px) rotate(50deg);
+}
+
+#home-page-btn-bottom span:nth-child(1) {
     position: absolute;
     right: 10%;
     top: 20px;
@@ -569,9 +732,11 @@ a {
     width: 2px;
     background-color: black;
     transform: rotate(-50deg);
+    transition: all .3s ease;
+    z-index: 100;
 }
 
-#home-page-btn-bottom div:nth-child(2) {
+#home-page-btn-bottom span:nth-child(2) {
     position: absolute;
     right: 10%;
     top: 22px;
@@ -580,6 +745,8 @@ a {
     background-color: black;
     transform: rotate(50deg);
     margin-top: 7px;
+    transition: all .3s ease;
+    z-index: 100;
 }
 
 /* Hair page
@@ -624,7 +791,7 @@ a {
 
 #hair-intro h2 {
     font-family: "Lobster Two";
-    font-size: 3vw;
+    font-size: 3em;
     margin-bottom: 40px;
     text-align: center;
 }
@@ -637,7 +804,7 @@ a {
 }
 
 #hair-intro p {
-    font-size: 1.3vw;
+    font-size: 1.3em;
     margin: 0 auto;
     width: 80%;
 }
@@ -645,7 +812,6 @@ a {
 .hair-services {
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
     margin-top: 20px;
 }
 
@@ -670,6 +836,10 @@ a {
 }
 
 .hair-services-box:hover .hair-services-btn-right {
+    background-color: #FFBCB8;
+}
+
+.hair-services-box:hover .hair-services-bridal-btn {
     background-color: #FFBCB8;
 }
 
@@ -701,6 +871,12 @@ a {
     color: black;
 }
 
+.hair-services-box-content a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hair-services-btn-left {
     font-family: "Lobster Two";
     font-size: 1.3em;
@@ -712,6 +888,7 @@ a {
     cursor: pointer;
     transition: all .3s ease;
 }
+
 .hair-services-btn-right {
     font-family: "Lobster Two";
     font-size: 1.3em;
@@ -723,6 +900,20 @@ a {
     cursor: pointer;
     transition: all .3s ease;
 }
+
+.hair-services-bridal-btn {
+    font-family: "Lobster Two";
+    font-size: 1.3em;
+    height: 50px;
+    width: 230px;
+    background-color: #D2EAFF;
+    border: 3px solid #666666;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+
 
 /* makeup page
 ---------------------------------------------- */
@@ -744,14 +935,14 @@ a {
 
 #makeup-intro h2 {
     font-family: "Lobster Two";
-    font-size: 3vw;
+    font-size: 3em;
     
     margin-bottom: 40px;
     text-align: center;
 }
 
 #makeup-intro p {
-    font-size: 1.3vw;
+    font-size: 1.3em;
     margin: 0 auto;
     width: 80%;
 }
@@ -780,6 +971,57 @@ a {
     margin: 15px 0;
     transition: all .3s ease;
     border-bottom: 1px solid rgb(95, 95, 95);
+}
+
+.makeup-services-box-mobile {
+    position: relative;
+    width: 375px;
+    height: 500px;
+    background-color: rgb(255, 232, 231);
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    transition: all .3s ease;
+    border-bottom: 1px solid rgb(95, 95, 95);
+    display: none;
+}
+
+.makeup-services-box-mobile img {
+    height: 202px;
+    width: auto;
+}
+
+.makeup-services-mobile-button {
+    position: absolute;
+    left: 100px;
+    bottom: 40px;
+    font-family: "Lobster Two";
+    font-size: 1.3em;
+    height: 50px;
+    width: 180px;
+    background-color: #D2EAFF;
+    border: 3px solid #666666;
+    margin: 30px auto 0;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.makeup-services-mobile-content{
+    text-align: center;
+}
+
+.makeup-services-mobile-content h2 {
+    font-family: "Playfair Display";
+    font-size: 1.5em;
+    letter-spacing: -0.5px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.makeup-services-mobile-content p {
+    font-size: 1.2em;
+    margin-top: 20px auto;
 }
 
 .makeup-services-box:hover {
@@ -959,7 +1201,7 @@ prices page
 
 #about-banner h1 {
     font-family: "Lobster Two";
-    font-size: 3vw;
+    font-size: 3em;
     margin-top: 50px;
 }
 
@@ -988,4 +1230,306 @@ prices page
 
 #about-page-btn-bottom:hover {
     background-color: #D2EAFF;
+}
+
+#opening-hours {
+    margin: 25px auto;
+    padding: 30px 0;
+    background-color: #FFF1F0;
+    font-size: 3vw;
+    border-bottom: 2px solid #666666;
+    
+}
+
+#opening-hours h1 {
+    font-family: "Lobster Two";
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#hours-container {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.day p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.dash div{
+    height: 2.5px;
+    width: 60px;
+    margin-top: 18px;
+    margin-bottom: 78%;
+    background-color: rgb(112, 112, 112);
+    
+}
+
+.hours p {
+    font-size: 27px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+#legal {
+    margin: 25px auto;
+    padding: 30px 0;
+    padding-bottom: 50px;
+    background-color: #FFF1F0;
+    font-size: 3vw;
+    border-bottom: 2px solid #666666;
+    text-align: center;
+}
+
+#legal h1 {
+    font-family: "Lobster Two";
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#legal h2 {
+    font-family: "Playfair Display";
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+#legal p {
+    font-size: 20px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+@media only screen and (max-width: 1250px) {
+
+    /* home page
+    --------------------------------------- */
+    .button {
+        top: -100px;
+        left: 60px;
+        width: 30%;
+        height: 70px;
+        font-size: 2vw;
+    }
+
+    #section-1-text p {
+        font-size: 1.5vw;
+    }
+
+    #nav-links {
+        display: none;
+    }
+
+    .menu-wrap {
+        display: block;
+    }
+
+    .logo-container {
+        top: 13px;
+        left: 50%;
+        margin-left: -107px;
+    }
+
+    .logo-container h2 {
+        font-size: 2.5em;
+        font-weight: normal;
+    }
+    
+    #essex {
+        font-family: "Cinzel";
+        font-size: 6px;
+        letter-spacing: 7px;
+        margin-top: 10px;
+    }
+    
+    #dot {
+        height: 3px;
+        width: 3px;
+        border-radius: 100%;
+        background-color: #404040;
+        position: absolute;
+        left: 50%;
+        margin-left: -2.5px;
+        margin-top: 5px;
+    }
+    
+    #nav-logo-sml {
+        font-family: "Cinzel";
+        font-size: 11px;
+        letter-spacing: 9.5px;
+        line-height: 10px;
+    }
+
+    .top-nav {
+        height: 120px;
+    }
+
+    .social-icons-box {
+        display: block;
+    }
+
+    /* hair page
+    ----------------------------------- */
+
+    .hair-services {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .hair-services-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .hair-services-box-content {
+        justify-content: center;
+        margin: 0 auto;
+        width: auto;
+    }
+
+    .hair-services-box img {
+        display: flex;
+    }
+
+/* 
+    makeup page
+    ----------------------------------------- */
+
+    .makeup-services-box-content h2 {
+        font-size: 1.5em;
+    }
+
+    .makeup-services-box-content p {
+        font-size: 1em;
+        width: 70%;
+    }
+
+   /*  prices page 
+    --------------------------------------------- */
+
+    .price-list h1 {
+        font-size: 2.5em;
+    }
+
+    .price-list h3 {
+        font-size: 2em;
+    }
+
+    .prices {
+        font-size: 1em;
+    }
+
+    /* about page
+    ----------------------------------------------- */
+
+    #about-page-content {
+        margin: 0 10%;
+    }
+
+    #hours-container {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+
+   /*  home page
+    ----------------------------------- */
+
+    #section-1 {
+        padding: 40px 5%;
+    }
+    
+    #section-1 img {
+        width: 50%;
+    }
+
+    #section-2 img {
+        width: 50%;
+    }
+
+    #section-1-text p {
+        font-size: 2vw;
+    }
+
+    #section-2 {
+        padding: 40px 5%;
+    }
+    
+    #section-2 img {
+        width: 50%;
+    }
+
+    #section-2-text p {
+        font-size: 2vw;
+    }
+
+    #section-3 p {
+        font-size: 2vw;
+    }
+
+    .button {
+        height: 60px;
+    }
+
+    #home-page-btn-bottom {
+        display: none;
+    }
+
+    #section-3 {
+        margin-bottom: 70px;
+    }
+
+   /*  makeup page 
+    ----------------------------------------- */
+
+    .makeup-services-box {
+        display: none;
+    }
+
+    .makeup-services-box-mobile {
+        display: block;
+    }
+
+    #makeup-intro p{
+        width: 100%;
+    }
+
+  /*   bridal page
+    ---------------------------------------------- */
+
+    .bridal-content h1 {
+        margin: 50px 0;
+        font-size: 5vw;
+    }
+
+    .bridal-text {
+        font-size: 2.4vw;
+    }
+
+    #bridal-page-btn-bottom {
+        height: 60px;
+        width: 270px;
+    }
+
+    /* prices page
+    ------------------------------------------------ */
+
+    #prices-content img {
+        display: none;
+    }
+
+    .price-list {
+        width: 80%;
+    }
+
 }
