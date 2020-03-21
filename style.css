@@ -405,8 +405,8 @@ a {
 
 
 .menu li {
-    padding: .5rem;
-    font-size: 2em;
+    padding: .3rem;
+    font-size: 1.5em;
 }
 
 .menu a {
@@ -426,6 +426,16 @@ a {
     height: auto;
 }
 
+.mobile-banner {
+    display: none;
+    width: 100%;
+
+}
+
+.mobile-banner img {
+    width: 100%;
+    height: auto;
+}
 .banner img {
     width: 100%;
     height: auto;
@@ -443,6 +453,23 @@ a {
     width: 20%;
     font-family: "Lobster Two";
     font-size: 1.5vw;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#mobile-button {
+    display: none;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 32px;
+    top: 500px;
+    background: #FFBCB8;
+    border: 3px solid #666666;
+    box-sizing: border-box;
+    height: 40px;
+    width: 130px;
+    font-family: "Lobster Two";
+    font-size: 1.2em;
     cursor: pointer;
     z-index: 1;
 }
@@ -545,16 +572,6 @@ a {
 .social-icons-footer img {
     height: 45px;
     width: 45px;
-}
-
-#back-top {
-    font-family: "Playfair Display";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    position: absolute;
-    top: 100px;
-    left: 10%;
 }
 
 #footer-container h2 {
@@ -1492,6 +1509,15 @@ prices page
         margin-bottom: 70px;
     }
 
+    /* hair page 
+    ------------------------------------------- */
+
+    #hair-banner {
+        margin: 0 0 30px;
+        display: flex;
+        justify-content: center;
+    }
+
    /*  makeup page 
     ----------------------------------------- */
 
@@ -1535,4 +1561,283 @@ prices page
         width: 80%;
     }
 
+}
+
+@media only screen and (max-width: 555px) {
+
+    .social-icons-box {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+
+    /* home
+    ------------------------------------------ */
+
+    #mobile-button {
+        display: block;
+    }
+
+    #dot {
+        display: none;
+    }
+
+    .logo-container p {
+        display: none;
+    }
+    .banner {
+        display: none;
+    }
+
+    .mobile-banner {
+        display: block;
+    }
+
+    .footer-link-box {
+        display: none;
+    }
+
+    #footer-container h5 {
+        font-size:.5em;
+        left: 50%;
+        margin-left: -106px;
+        top: 140px;
+    }
+
+    .footer {
+        height: 160px;
+    }
+
+    #footer-signiture {
+        top: 10px;
+    }
+
+    .social-icons-footer {
+        top: 70px;
+    }
+
+    .menu-wrap {
+        position: absolute;
+        top: 0px;
+        left: 70px;
+        z-index: 150;
+    }
+    
+    .menu-wrap .toggler {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 151;
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .menu-wrap .hamburger {
+        width: 30px;
+    }
+
+    .top-nav {
+        height: 70px;
+    }
+
+    .logo-container {
+        top: 0px;
+    }
+
+    .intro-text {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .intro-text p {
+        font-size: 1em;
+        line-height: 30px;
+    }
+
+    #section-1 {
+        padding: 30px 0;
+        padding-bottom: 5px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #section-1-text {
+        width: 90%;
+        text-align: center;
+    }
+
+    #section-1-text p {
+        font-size: 1em;
+
+    }
+    
+    #section-1 h1 {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 3em;    
+    }
+
+    #section-1 img {
+       display: none;
+    }
+
+    #section-2 {
+        padding: 30px 0;
+        padding-bottom: 5px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #section-2-text {
+        width: 90%;
+        text-align: center;
+    }
+
+    #section-2-text p {
+        font-size: 1em;
+        text-align: center;
+    }
+    
+    #section-2 h1 {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 3em;    
+    }
+
+    #section-2 img {
+        display: none;
+    }
+
+    #section-3 {
+        margin-bottom: 0;
+    }
+
+    #section-3 h1 {
+        font-size: 3em;
+        margin-top: 0px;
+    }
+
+    #section-3 p{
+        font-size: 1em;
+        width: 90%;
+    }
+
+    #section-3 img {
+        width: 95%;
+    }
+
+   /*  hair page
+    ---------------------------------------- */
+
+    #hair-banner {
+        display: none;
+    }
+
+    .line-box {
+        display: none;
+    }
+    
+    .content {
+        margin: 10px 0;
+    }
+
+    #hair-intro {
+        margin: 25px auto;
+    }
+
+    #hair-intro p {
+        width: 90%;
+        font-size: 1em;
+    }
+
+    .hair-services-box img {
+        display: none;
+    }
+
+    .hair-services-box {
+        border: none;
+    }
+
+    /* makeup page
+    -------------------------------------------- */
+
+    #makeup-banner {
+        display: none;
+    }
+
+    #makeup-intro {
+        margin: 25px auto;
+    }
+
+    #makeup-intro p {
+        width: 90%;
+        font-size: 1em;
+    }
+
+    /* bridal page 
+    ----------------------------------------- */
+
+    #bridal-banner {
+        display: none;
+    }
+
+    .bridal-content {
+        margin: 25px 0;
+    }
+
+    .bridal-content h1 {
+        margin: 25px 0;
+        margin-bottom: 35px;
+        font-size: 1.5em;
+    }
+
+    .bridal-content p {
+        font-size: 1em;
+        width: 90%;
+    }
+
+    /* prices page 
+    ----------------------------------- */
+
+    .price-list {
+        margin: 40px auto;
+    }
+
+    .prices p {
+        font-size: 1em;
+    }
+
+    /* about page 
+    -------------------------------------- */
+
+    #about-page-content {
+        margin: 20px 0;
+    }
+
+    #about-banner p {
+        margin: 40px auto 0;
+        width: 90%;
+    }
+
+    #opening-hours h1 {
+        font-size: 3em;
+    }
+
+    #hours-container {
+        width: 100%;
+    }
+
+    .day {
+        font-size: 20px;
+    }
+
+    .hours {
+        font-size: 1.5em;
+    }
 }
