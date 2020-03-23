@@ -1890,6 +1890,14 @@ prices page
         font-size: 3em;
     }
 
+    #legal h1 {
+        font-size: 3em;
+    }
+
+    #legal h2 {
+        font-size: 2em;
+    }
+
     #hours-container {
         width: 100%;
     }
