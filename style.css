@@ -9,7 +9,6 @@ body {
     font-family: "Cinzel";
     width: 100%;
     background-color: #FDFDFD;
-    overflow-x: hidden;
 }
 
 p {
@@ -80,7 +79,7 @@ a {
     color: black;
     font-size: 1.3em;
     margin: 0 25px;
-    animation: all .3s ease;
+    transition: all .1s ease-in-out;
     font-weight: bold;
 }
 
@@ -111,15 +110,16 @@ a {
     font-weight: bold;
 }
 
-#services {
-    padding-bottom: 90px;
+#services a {
+    padding-bottom: 20px;
 }
 
 #dropdown {
     position: absolute;
     flex-direction: row;
     opacity: 0;
-    width: 100vw;
+    visibility: hidden;
+    width: 100%;
     height: 310px;
     background-color: rgb(255, 229, 227);
     z-index: 50;
@@ -134,8 +134,16 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 70%;
+    width: 85%;
     margin: 20px auto;
+}
+
+#dropdown-title {
+    font-size: 1.7em;
+    font-family: "Lobster Two";
+    position: relative;
+    top: -50px;
+    width: 100%;
 }
 
 .dropdown-box {
@@ -143,21 +151,24 @@ a {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    width: 300px;
+    margin-top: 20px;
 }
 
 .dropdown-box p {
-    position: relative;
-    top: -20px;
+    position: absolute;
+    bottom: 30px;
     color: black;
     font-size: 18px;
     margin-top: 0;
-    width: 80%;
+    width: 350px;
 }
 
 .dropdown-divider {
-    width: 2px;
+    width: 3px;
     background-color: rgb(43, 43, 43);
     height: 250px;
+    margin-top: 10px;
 }
 
 .dropdown:hover {
@@ -209,17 +220,15 @@ a {
 
 /* social dropdown*/
 #socials:hover ~ .socials-dropdown {
-    opacity: 1;
     display: block;
 }
 
 #socials {
-    padding-bottom: 90px;
+    padding-bottom: 150px;
 }
 
 .socials-dropdown {
     position: absolute;
-    opacity: 0;
     display: none;
     margin-top: 112px;
     width: 440px;
