@@ -9,6 +9,7 @@ body {
     font-family: "Cinzel";
     width: 100%;
     background-color: #FDFDFD;
+    overflow-x: hidden;
 }
 
 p {
@@ -23,7 +24,7 @@ a {
 }
 
 .mt {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .top-nav {
@@ -166,7 +167,7 @@ a {
 
 .dropdown-divider {
     width: 3px;
-    background-color: rgb(43, 43, 43);
+    background-color: #373737;
     height: 250px;
     margin-top: 10px;
 }
@@ -409,6 +410,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: left;
 }
 
 .menu-wrap .menu > div {
@@ -425,28 +427,49 @@ a {
 }
 
 .menu-wrap .menu > div > div {
+    margin-top: 35px;
     text-align: center;
-    max-width: 90vw;
+    max-width: 100%;
     max-height: 100vh;
     opacity: 0;
     transition: opacity .4s ease;
 }
 
+#burger-header {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
 
 .menu li {
-    padding: .3rem;
-    font-size: 1.5em;
+    padding: .2rem;
+    font-size: 1.4em;
+}
+
+#burger-links li {
+    margin-bottom: 8px;
+}
+
+#burger-footer {
+    font-size: 1em;
+    margin-top: 20px;
 }
 
 .menu a {
     color: #272727;
     font-weight: bold;
+    font-family: "Playfair Display";
 }
 
 .menu a:hover {
     color: white;
     transition: color .1s ease-in-out;
     font-weight: bold;
+}
+
+.menu li img {
+    height: 25px;
+    width: 25px;
+    
 }
 
 .banner {
@@ -748,11 +771,11 @@ a {
     height: 100%;
 }
 
-.side-menu li {
+.side-menu a {
     padding: 12px 0;
 }
 
-.side-menu li:hover {
+.side-menu a:hover {
     background-color: rgb(240, 248, 255);
 }
 
@@ -1550,6 +1573,10 @@ prices page
    /*  makeup page 
     ----------------------------------------- */
 
+    #makeup-banner {
+        margin: 0 0 30px;
+    }
+
     .makeup-services-box {
         display: none;
     }
@@ -1564,6 +1591,10 @@ prices page
 
   /*   bridal page
     ---------------------------------------------- */
+
+    #bridal-banner {
+        margin: 0 0 30px;
+    }
 
     .bridal-content h1 {
         margin: 50px 0;
@@ -1616,6 +1647,7 @@ prices page
     .logo-container p {
         display: none;
     }
+
     .banner {
         display: none;
     }

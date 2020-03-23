@@ -1,3 +1,4 @@
+// drop down menu
 services = document.getElementById("services");
 dropdown = document.getElementById("dropdown");
 
@@ -12,5 +13,5 @@ function show () {
 function hide () {
     dropdown.style.opacity = "0"
     dropdown.style.visibility = "hidden"
-    
 }
+
