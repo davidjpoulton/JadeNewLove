@@ -8,7 +8,8 @@
 body {
     font-family: "Cinzel";
     width: 100%;
-    background-color: #FDFDFD
+    background-color: #FDFDFD;
+    overflow-x: hidden;
 }
 
 p {
@@ -110,49 +111,68 @@ a {
     font-weight: bold;
 }
 
-#services:hover ~ .dropdown {
-    opacity: 1;
-    display: block;
-}
-
 #services {
     padding-bottom: 90px;
 }
 
-.dropdown {
+#dropdown {
     position: absolute;
+    flex-direction: row;
     opacity: 0;
-    display: none;
-    margin-top: 112px;
-    width: 440px;
-    height: 180px;
+    width: 100vw;
+    height: 310px;
     background-color: rgb(255, 229, 227);
     z-index: 50;
     font-family: "Playfair Display";
     font-size: 1em;
-    justify-content: center;
     border-bottom: 2px solid #373737;
     z-index: 5;
-    text-align: center;
     transition: all .2s ease;
+}
+
+#dropdown-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.dropdown-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.dropdown-box p {
+    position: relative;
+    top: -20px;
+    color: black;
+    font-size: 18px;
+    margin-top: 0;
+    width: 80%;
+}
+
+.dropdown-divider {
+    width: 2px;
+    background-color: rgb(43, 43, 43);
+    height: 250px;
 }
 
 .dropdown:hover {
     display: block;
-    opacity: 1;
 }
 
-.dropdown li {
+.dropdown a {
     padding: 16px 0; 
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
 }
 
 .dropdown a:hover {
     color: #000000;
-}
-
-.dropdown li:hover {
-    background-color: rgb(255, 244, 244);
 }
 
 #services:hover #drop-arrow span {
