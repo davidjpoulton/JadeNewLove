@@ -9,7 +9,6 @@ body {
     font-family: "Cinzel";
     width: 100%;
     background-color: #FDFDFD;
-    overflow-x: hidden;
 }
 
 p {
@@ -403,7 +402,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 90vw;
     height: 100%;
     visibility: hidden;
     overflow: hidden;
@@ -1516,6 +1515,10 @@ prices page
 
    /*  home page
     ----------------------------------- */
+
+    #dropdown {
+        display: none;
+    }
 
     #section-1 {
         padding: 40px 5%;
